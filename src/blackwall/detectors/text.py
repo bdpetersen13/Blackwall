@@ -43,31 +43,35 @@ class TextDetector(BaseDetector):
         return self.config.text_model_path
     
     def load_model(self) -> None:
-        """ Load the Text Detection Model """
+        """ Load Text Detection Model """
         try:
             self.logger.info("loading_text_model")
             
-            # For MVP, we'll use a pre-trained model
-            # TODO: In production, create and load a fine-tuned model
-            model_name = "roberta-base-openai-detector"
+            # Check if local model exists
+            local_model_path = self.config.text_model_path.parent / "text_detector"
             
-            # Try loading from local path first
-            if self.model_path.exists():
-                self.model, self.tokenizer = model_loader.load_transformers_model(
-                    model_name,
-                    model_path=self.model_path
-                )
+            if local_model_path.exists():
+                # Load from local path
+                model_name = str(local_model_path)
+                self.logger.info(f"Loading model from local path: {model_name}")
             else:
-                # Download and load from HuggingFace
-                self.model, self.tokenizer = model_loader.load_transformers_model(
-                    model_name
+                # Use default model for MVP
+                model_name = "distilbert-base-uncased-finetuned-sst-2-english"
+                self.logger.warning(
+                    "Local model not found, using default sentiment model. "
+                    "This is for demonstration only - train a proper AI detection model for production use"
                 )
+            
+            self.model, self.tokenizer = model_loader.load_transformers_model(
+                model_name,
+                model_path = local_model_path if local_model_path.exists() else None
+            )
             
             self._model_loaded = True
             self.logger.info("text_model_loaded")
             
         except Exception as e:
-            self.logger.error("text_model_load_failed", error=str(e))
+            self.logger.error("text_model_load_failed", error = str(e))
             raise ModelLoadError(f"Failed to load text model: {str(e)}")
     
     def preprocess(self, file_path: Path) -> Dict[str, Any]:
@@ -89,10 +93,10 @@ class TextDetector(BaseDetector):
             # Tokenize for model
             tokens = self.tokenizer(
                 text,
-                truncation=True,
-                max_length=self.max_length,
-                padding="max_length",
-                return_tensors="pt"
+                truncation = True,
+                max_length = self.max_length,
+                padding = "max_length",
+                return_tensors = "pt"
             )
             
             return {
@@ -104,8 +108,8 @@ class TextDetector(BaseDetector):
         except Exception as e:
             self.logger.error(
                 "text_preprocessing_failed",
-                file_path=str(file_path),
-                error=str(e)
+                file_path = str(file_path),
+                error = str(e)
             )
             raise
     
