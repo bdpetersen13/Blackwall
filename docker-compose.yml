@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  blackwall:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: blackwall:latest
+    container_name: blackwall
+    volumes:
+      # Mount input files
+      - ./input:/input:ro
+      # Mount output directory
+      - ./output:/output
+      # Mount models (optional, for custom models)
+      - ./models:/app/models
+      # Mount cache
+      - blackwall-cache:/app/cache
+    environment:
+      - LOG_LEVEL=INFO
+      - ENABLE_CACHE=true
+      - CACHE_DIR=/app/cache
+      - TEXT_MODEL_PATH=/app/models/text_detector.pth
+      - IMAGE_MODEL_PATH=/app/models/image_detector.pth
+    # Override entrypoint for interactive use
+    entrypoint: ["/bin/bash"]
+    stdin_open: true
+    tty: true
+
+  # Service for batch processing
+  blackwall-batch:
+    image: blackwall:latest
+    volumes:
+      - ./input:/input:ro
+      - ./output:/output
+      - blackwall-cache:/app/cache
+    environment:
+      - LOG_LEVEL=INFO
+    command: ["--help"]
+
+volumes:
+  blackwall-cache:

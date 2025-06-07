@@ -1,24 +1,41 @@
-# Core dependencies
-click==8.1.7
-numpy==1.24.3
+# Core ML dependencies - Compatible versions for Apple Silicon
 torch==2.1.0
 torchvision==0.16.0
-transformers==4.35.0
-onnxruntime==1.16.0
-Pillow==10.1.0
-opencv-python==4.8.1
-ffmpeg-python==0.2.0
-scikit-learn==1.3.0
+numpy==1.24.3
 
-# File handling
-python-magic==0.4.27
+# Transformers ecosystem - All compatible versions
+transformers==4.36.2
+tokenizers==0.15.0
+huggingface-hub==0.20.1
+
+# Computer Vision
+opencv-python-headless==4.8.1.78  # headless version works better on macOS
+Pillow==10.1.0
+
+# ML and Data Processing
+scikit-learn==1.3.2
+onnxruntime==1.16.3  # Apple Silicon optimized
+
+# File Processing
+python-docx==1.1.0
+PyPDF2==3.0.1
+python-magic-bin==0.4.14  # Works better on macOS than python-magic
 chardet==5.2.0
 
-# Utilities
+# CLI and Utilities
+click==8.1.7
+rich==13.7.0
+tqdm==4.66.1
+colorama==0.4.6
+
+# Video Processing
+ffmpeg-python==0.2.0
+
+# Configuration and Logging
 python-dotenv==1.0.0
 pydantic==2.5.0
-colorama==0.4.6
-tqdm==4.66.1
-
-# Logging
 structlog==23.2.0
+
+# Additional utilities
+psutil==5.9.6
+requests==2.31.0
