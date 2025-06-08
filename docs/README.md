@@ -26,7 +26,7 @@
     ║                                                                                                                                   ║
     ║                                                                                                                                   ║
     ║                                               GenAI Detection Tool v0.1.0                                                         ║
-    ║                                                                                                                                   ║     
+    ║                                                                                                                                   ║
     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ## 🎯 What is Blackwall?
@@ -35,8 +35,8 @@ Blackwall is a command-line tool that detects AI-generated content in text files
 
 ### Why "Blackwall"?
 
-GenAI has a lot of potential, but that means for each good opportunity it provides there are negative ones that people will use it for—malicious intent or not. From fake news, videos, or images portraying one thing that’s not truthful. GenAI has the potential to be physically, emotionally, and mentially harmful to people.
-The line between useful AI and harmful manipulation is an extreemely grey line. Deepfakes can erode trust in public figures. Synthetic news articles can shift public opinion or tank a company’s stock before the truth catches up. Even without ill intent, GenAI models can amplify bias, hallucinate facts, or be used in ways the creators never anticipated
+GenAI has a lot of potential, but that means for each good opportunity it provides, there are negative ones that people will use it for, malicious intent or not. From fake news, videos, or images portraying one thing that’s not truthful. GenAI has the potential to be physically, emotionally, and mentally harmful to people.
+The line between useful AI and harmful manipulation is an extremely grey line. Deepfakes can erode trust in public figures. Synthetic news articles can shift public opinion or tank a company’s stock before the truth catches up. Even without ill intent, GenAI models can amplify bias, hallucinate facts, or be used in ways the creators never anticipated
 
 That doesn’t mean we should avoid GenAI—it means we need regulations and guardrails in place, responsible deployment and ownership from these GenAI companies, and widespread education. How we decide to align and to GenAI is how we will determine whether it becomes a force multiplier or a societal hazard
 
@@ -257,7 +257,10 @@ make format
 
 <p align="center">
   Made with ❤️ by Brandon Petersen
-  Some of the content in this repository has been made with GenAI, such as this README.md file
+</p>
+
+<p align="center">
+  Some of the content in this repository has been made with GenAI, such as this README.md file and some of the code
 </p>
 
 <p align="center">
