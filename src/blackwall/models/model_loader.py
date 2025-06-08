@@ -28,7 +28,7 @@ MODEL_REGISTRY = {
         "model_name": "roberta-base-openai-detector",
         "url": "https://huggingface.co/roberta-base-openai-detector",
         "size_mb": 450,
-        "hash": "sha256:xxxxx",  # Would be actual hash in production
+        "hash": "sha256:xxxxx",  # TODO: Actual hash in production
         "description": "RoBERTa-based text detector fine-tuned on GPT outputs"
     },
     "image_detector_v1": {

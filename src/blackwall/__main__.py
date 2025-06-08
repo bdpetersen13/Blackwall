@@ -1,7 +1,7 @@
 """ Main Entry Point for Blackwall cli """
 import sys
 
-# Import detectors to register them
+# Import detectors to register them - MUST happen before cli import
 from blackwall.detectors import text, image, video
 from blackwall.cli import main
 

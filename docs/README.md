@@ -1,4 +1,4 @@
-# 🛡️ Blackwall - Local AI Content Detection Tool
+# 🛡️ Blackwall - AI Content Detection Tool
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-0.1.0-blue.svg" alt="Version">
@@ -25,7 +25,8 @@
     ║   ░▒▓███████▓▒░░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█████████████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓████████▓▒░   ║
     ║                                                                                                                                   ║
     ║                                                                                                                                   ║
-    ║                                               GenAI Detection Tool v0.1.0                                                         ║      ║                                                                                                                                   ║
+    ║                                               GenAI Detection Tool v0.1.0                                                         ║
+    ║                                                                                                                                   ║     
     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ## 🎯 What is Blackwall?
@@ -207,7 +208,7 @@ Blackwall uses a modular architecture with specialized detectors:
 - 📈 Detailed analysis reports with explanations
 - 🔄 Real-time monitoring capabilities
 
-### Phase 4: Ecosystem (Q3 2025)
+### Phase 4: Ecosystem
 - 🌐 Web interface (still local processing)
 - 🔗 Integration libraries (Python, Node.js, Go)
 - 📚 Model zoo with specialized detectors
@@ -250,13 +251,13 @@ make format
 ## 📞 Contact & Support
 
 - **GitHub Issues**: [Report bugs or request features](https://github.com/bdpetersen13/Blackwall/issues)
-- **Discussions**: [Join the conversation](https://github.com/bdpetersen13/Blackwall/discussions)
 - **Email**: petersen.brandon@sudomail.com
 
 ---
 
 <p align="center">
   Made with ❤️ by Brandon Petersen
+  Some of the content in this repository has been made with GenAI, such as this README.md file
 </p>
 
 <p align="center">

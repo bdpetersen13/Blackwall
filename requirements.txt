@@ -1,4 +1,4 @@
-# Core ML dependencies - Compatible versions for Apple Silicon
+# Core ML dependencies
 torch==2.1.0
 torchvision==0.16.0
 numpy==1.24.3
@@ -9,17 +9,17 @@ tokenizers==0.15.0
 huggingface-hub==0.20.1
 
 # Computer Vision
-opencv-python-headless==4.8.1.78  # headless version works better on macOS
+opencv-python-headless==4.8.1.78
 Pillow==10.1.0
 
 # ML and Data Processing
 scikit-learn==1.3.2
-onnxruntime==1.16.3  # Apple Silicon optimized
+onnxruntime==1.16.3 
 
 # File Processing
 python-docx==1.1.0
 PyPDF2==3.0.1
-python-magic-bin==0.4.14  # Works better on macOS than python-magic
+python-magic==0.4.27
 chardet==5.2.0
 
 # CLI and Utilities
@@ -34,6 +34,7 @@ ffmpeg-python==0.2.0
 # Configuration and Logging
 python-dotenv==1.0.0
 pydantic==2.5.0
+pydantic-settings==2.1.0
 structlog==23.2.0
 
 # Additional utilities

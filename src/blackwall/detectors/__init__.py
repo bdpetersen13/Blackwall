@@ -62,6 +62,13 @@ def detect_file(file_path: Path) -> DetectionResult:
     return detector.detect(file_path)
 
 
+# Import detector modules to trigger registration
+# This is important! Without these imports, detectors won't be registered
+from blackwall.detectors import text
+from blackwall.detectors import image
+from blackwall.detectors import video
+
+
 __all__ = [
     "BaseDetector",
     "DetectionResult",
